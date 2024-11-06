@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "manualPrice": {
+      "type": "boolean"
+    },
+    "priceUnit": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::unit.unit"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "ingredients": {
+      "displayName": "ingredients",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.ingredients"
+    },
+    "user": {
+      "type": "string"
+    }
+  }
+}

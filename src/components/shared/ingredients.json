@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_ingredients",
+  "info": {
+    "displayName": "ingredients",
+    "icon": "cog",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "quantity": {
+      "type": "decimal"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    }
+  }
+}
